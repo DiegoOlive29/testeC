@@ -2,11 +2,11 @@ using System;
 
     
 class exercicio5{ 
-    static int findGolomb(int n){
+    static int EncontreSeq(int n){
         if(n==1){
             return n;
         }
-        return 1 + findGolomb(n - findGolomb(findGolomb(n-1)));
+        return 1 + EncontreSeq(n - EncontreSeq(EncontreSeq(n-1)));
         
     }
     static void Main (){ 
@@ -18,7 +18,7 @@ class exercicio5{
         
         for(int i =1;i<= n ; i++){
 
-            Console.Write(findGolomb(i)+", ");
+            Console.Write(EncontreSeq(i)+", ");
 
         }
 
